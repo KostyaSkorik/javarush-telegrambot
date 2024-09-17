@@ -22,6 +22,13 @@ jobs:
        mysql root password: 'Ka2004-skor'
        mysql user: 'dev_jrtb_db_user'
        mysql password: 'dev_jrtb_db_password'
+   - name: Slack notification action
+  # You may pin to the exact commit or the version.
+  # uses: Skarlso/slack-notification-action@28f5c1166e2fba7ed5a1d9ceaeb4f2c89a4e5bc5
+     uses: Skarlso/slack-notification-action@v0.3.0
+     with:
+    # The slack bot token.
+       token: 7346773484:AAGr02mPN7L7P10DQNuLNmmx52ZU07xH2hE 
    - name: Set up JDK 17
      uses: actions/setup-java@v4
      with:
