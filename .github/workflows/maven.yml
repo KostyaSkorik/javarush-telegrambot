@@ -28,14 +28,14 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - uses: actions/checkout@v2
-              - name: Set up MySQL
-              uses: mirromutth/mysql-action@v1.1
-              with:
-                mysql version: '5.7'
-                mysql database: 'dev_jrtb_db'
-                mysql root password: 'Ka2004-skor'
-                mysql user: 'dev_jrtb_db_user'
-                mysql password: 'dev_jrtb_db_password'
+    - name: Set up MySQL
+      uses: mirromutth/mysql-action@v1.1
+      with:
+        mysql version: '5.7'
+        mysql database: 'dev_jrtb_db'
+        mysql root password: 'Ka2004-skor'
+        mysql user: 'dev_jrtb_db_user'
+        mysql password: 'dev_jrtb_db_password'
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
