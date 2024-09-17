@@ -1,2 +1,17 @@
 C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\bot\JavarushTelegramBot.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\command\Command.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\command\CommandContainer.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\command\CommandName.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\command\HelpCommand.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\command\NoCommand.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\command\StartCommand.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\command\StatCommand.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\command\StopCommand.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\command\UnknownCommand.java
 C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\JavarushTelegramBotApplication.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\repository\entity\TelegramUser.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\repository\TelegramUserRepository.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\service\SendBotMessageService.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\service\SendBotMessageServiceImpl.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\service\TelegramUserService.java
+C:\Java\javarush-telegrambot\src\main\java\com\github\javarushcommunity\javarush_telegrambot\service\TelegramUserServiceImpl.java

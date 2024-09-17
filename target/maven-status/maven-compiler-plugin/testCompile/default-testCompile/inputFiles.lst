@@ -1,1 +1,9 @@
+C:\Java\javarush-telegrambot\src\test\java\com\github\javarushcommunity\javarush_telegrambot\command\AbstractCommandTest.java
+C:\Java\javarush-telegrambot\src\test\java\com\github\javarushcommunity\javarush_telegrambot\command\CommandContainerTest.java
+C:\Java\javarush-telegrambot\src\test\java\com\github\javarushcommunity\javarush_telegrambot\command\HelpCommandTest.java
+C:\Java\javarush-telegrambot\src\test\java\com\github\javarushcommunity\javarush_telegrambot\command\NoCommandTest.java
+C:\Java\javarush-telegrambot\src\test\java\com\github\javarushcommunity\javarush_telegrambot\command\StartCommandTest.java
+C:\Java\javarush-telegrambot\src\test\java\com\github\javarushcommunity\javarush_telegrambot\command\StopCommandTest.java
+C:\Java\javarush-telegrambot\src\test\java\com\github\javarushcommunity\javarush_telegrambot\command\UnknownCommandTest.java
 C:\Java\javarush-telegrambot\src\test\java\com\github\javarushcommunity\javarush_telegrambot\JavarushTelegramBotApplicationTests.java
+C:\Java\javarush-telegrambot\src\test\java\com\github\javarushcommunity\javarush_telegrambot\service\SendBotMessageServiceTest.java
