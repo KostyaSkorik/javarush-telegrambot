@@ -22,8 +22,6 @@ jobs:
        mysql root password: 'Ka2004-skor'
        mysql user: 'dev_jrtb_db_user'
        mysql password: 'dev_jrtb_db_password'
-   - name: Telegram Bot Token
-     with:
        token: 7346773484:AAGr02mPN7L7P10DQNuLNmmx52ZU07xH2hE 
    - name: Set up JDK 17
      uses: actions/setup-java@v4
