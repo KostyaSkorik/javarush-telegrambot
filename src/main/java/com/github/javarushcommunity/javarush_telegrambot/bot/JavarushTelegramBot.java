@@ -2,33 +2,55 @@ package com.github.javarushcommunity.javarush_telegrambot.bot;
 
 import com.github.javarushcommunity.javarush_telegrambot.command.CommandContainer;
 import com.github.javarushcommunity.javarush_telegrambot.service.SendBotMessageServiceImpl;
-import org.springframework.beans.factory.annotation.Value;
+import com.github.javarushcommunity.javarush_telegrambot.service.TelegramUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+
+import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 import static com.github.javarushcommunity.javarush_telegrambot.command.CommandName.*;
 
 
-
+/*
+Разобраться с тем, что не отображаются поля при регистрации бота, и геттеры выдают null
+ */
 @Component
 public class JavarushTelegramBot extends TelegramLongPollingBot {
-
-    @Value(value = "${bot.username}")
-    private String botUsername;
-    @Value(value = "${bot.token}")
-    private String botToken;
+    private String username = "test1_javarush_community_bot";
+//    @Value(value = "${bot.token}")
+    private String token = "7346773484:AAGr02mPN7L7P10DQNuLNmmx52ZU07xH2hE" ;
 
     private final CommandContainer commandContainer;
 
-    public JavarushTelegramBot(){
-        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this));
+
+
+
+    public void registr() throws TelegramApiException{
+        //Регистрация бота
+        TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
+        try {
+            telegramBotsApi.registerBot(this);
+        }
+        catch (TelegramApiException e) {
+            System.out.println("Error occurred: " + e.getMessage());
+        }
+    }
+    @Autowired
+    public JavarushTelegramBot(TelegramUserService telegramUserService) throws TelegramApiException {
+        registr();
+        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this),telegramUserService);
 
     }
 
 
+
     @Override
     public void onUpdateReceived(Update update) {
+
         if(update.hasMessage() && update.getMessage().hasText()) {
             String message = update.getMessage().getText().trim();
             String COMMAND_PREFIX = "/";
@@ -43,11 +65,11 @@ public class JavarushTelegramBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return botUsername;
+        return username;
     }
 
     @Override
     public String getBotToken() {
-        return botToken;
+        return token;
     }
 }
