@@ -21,7 +21,6 @@ import static com.github.javarushcommunity.javarush_telegrambot.command.CommandN
 @Component
 public class JavarushTelegramBot extends TelegramLongPollingBot {
     private String username = "test1_javarush_community_bot";
-//    @Value(value = "${bot.token}")
     private String token = "7346773484:AAGr02mPN7L7P10DQNuLNmmx52ZU07xH2hE" ;
 
     private final CommandContainer commandContainer;

@@ -1,6 +1,7 @@
 package com.github.javarushcommunity.javarush_telegrambot;
 
 
+import com.github.javarushcommunity.javarush_telegrambot.javarushclient.dto.MeGroupInfo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -13,7 +14,6 @@ public class JavarushTelegramBotApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(JavarushTelegramBotApplication.class, args);
-
 
 	}
 

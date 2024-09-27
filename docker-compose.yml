@@ -1,27 +1,35 @@
 version: '3.1'
 
 services:
-  jrtb-bot:
-    depends_on:
-      - jrtb-db
-    build:
-      context: .
-    environment:
-      BOT_NAME: ${BOT_NAME}
-      BOT_TOKEN: ${BOT_TOKEN}
-      BOT_DB_USERNAME: ${BOT_DB_USERNAME}
-      BOT_DB_PASSWORD: ${BOT_DB_PASSWORD}
-    restart: always
   jrtb-db:
     image: mysql:5.7
+    container_name: Javarush-database
     restart: always
     environment:
-      MYSQL_USER: ${BOT_DB_USERNAME}
-      MYSQL_PASSWORD: ${BOT_DB_PASSWORD}
-      MYSQL_DATABASE: 'jrtb_db'
-      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: jrtb_db
+      MYSQL_ROOT_PASSWORD: Ka2004-skor
     ports:
-      - '3306:3306'
-    expose:
-      - '3306'
-    command: --character-set-server=utf8 --collation-server=utf8_general_ci
+      - "3306:3306"
+    #    expose:
+    #      - '3306'
+    networks:
+      - backend
+
+  jrtb-bot:
+    build:
+      context: .
+    container_name: Javarush-bot
+    environment:
+      BOT_NAME: test1_javarush_community_bot
+      BOT_TOKEN: 7346773484:AAGr02mPN7L7P10DQNuLNmmx52ZU07xH2hE
+    depends_on:
+      - jrtb-db
+    restart: always
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
+
+
